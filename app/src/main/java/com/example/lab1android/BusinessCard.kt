@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
@@ -26,6 +25,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -79,7 +79,7 @@ fun PhotoName() {
         horizontalAlignment     = Alignment.CenterHorizontally) {
         Image(
             modifier = Modifier
-                .size(200.dp)
+                .size(dimensionResource(R.dimen.avatar_size))
                 .clip(CircleShape)
                 .background(Color.LightGray),
             bitmap = ImageBitmap.imageResource(R.drawable.photo),
@@ -87,7 +87,7 @@ fun PhotoName() {
             contentScale = ContentScale.Crop,
             alignment = Alignment.Center
         )
-        Spacer(modifier = Modifier.height(20.dp))
+        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacer_size)))
         Text(
             text = stringResource(R.string.name),
             color = MaterialTheme.colorScheme.primary,
@@ -104,6 +104,7 @@ fun PhotoName() {
 @Composable
 fun Contacts ()
 {
+
     Column(
         verticalArrangement     = Arrangement.Center,
         horizontalAlignment     = Alignment.CenterHorizontally
@@ -112,31 +113,35 @@ fun Contacts ()
             Icon(
                 Icons.Filled.Phone,
                 contentDescription = stringResource(R.string.phone_icon_description),
-                tint = MaterialTheme.colorScheme.onBackground
+                tint = MaterialTheme.colorScheme.onBackground,
+                modifier = Modifier.align(Alignment.CenterVertically)
             )
-            Spacer(Modifier.width(5.dp))
+            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacer_size)))
             Text(
                 text = stringResource(R.string.phone) + ": " + stringResource(R.string.phone_number),
-                color = MaterialTheme.colorScheme.onBackground
+                color = MaterialTheme.colorScheme.onBackground,
+                fontSize = 4.em
             )
         }
         Row(modifier = Modifier.align(Alignment.Start), Arrangement.SpaceBetween) {
             Icon(
                 Icons.Filled.Email,
                 contentDescription = stringResource(R.string.email_icon_description),
-                tint = MaterialTheme.colorScheme.onBackground
+                tint = MaterialTheme.colorScheme.onBackground,
+                modifier = Modifier.align(Alignment.CenterVertically)
             )
-            Spacer(Modifier.width(5.dp))
+            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacer_size)))
             Text(
                 text = stringResource(R.string.email) + ": " + stringResource(R.string.email_adress),
-                color = MaterialTheme.colorScheme.onBackground
+                color = MaterialTheme.colorScheme.onBackground,
+                fontSize = 4.em
             )
         }
     }
 }
 
-@Preview(showBackground = true)
-@Preview(showBackground = true, widthDp = 1000, heightDp = 600)
+@Preview(showBackground = true, locale = "ru")
+@Preview(showBackground = true, device = "spec:width=1280dp,height=800dp,dpi=240")
 @Composable
 fun PreviewBusinessCard() {
     Lab1AndroidTheme {
