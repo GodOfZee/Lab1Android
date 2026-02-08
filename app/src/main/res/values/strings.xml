@@ -3,9 +3,10 @@
     <string name="name">Alexander Mikryukov</string>
     <string name="picture_description">Man in glasses</string>
     <string name="phone">Phone</string>
-    <string name="phone_number" translatable="false">+7 (999) 123-45-67</string>
+    <string name="phone_number" translatable="false">+7(999)123–45–67</string>
     <string name="email">Email</string>
     <string name="email_adress" translatable="false">alex.mikr.06.03@gmail.com</string>
-    <string name="email_description">Letter icon</string>
-    <string name="post">Student of group B23-191-1</string>
+    <string name="post">Student of group B23–191–1</string>
+    <string name="phone_icon_description">Picture of phone</string>
+    <string name="email_icon_description">Picture of letter</string>
 </resources>

@@ -5,6 +5,7 @@
     <string name="picture_description">Мужчина в очках</string>
     <string name="phone">Телефон</string>
     <string name="email">Почта</string>
-    <string name="email_description">Изображение письма</string>
-    <string name="post">Студент группы Б23-191-1</string>
+    <string name="post">Студент группы Б23–191–1</string>
+    <string name="phone_icon_description">Изображение телефона</string>
+    <string name="email_icon_description">Изображение письма</string>
 </resources>
