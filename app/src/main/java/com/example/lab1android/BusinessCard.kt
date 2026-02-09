@@ -1,5 +1,6 @@
 package com.example.lab1android
 
+import android.content.res.Configuration.ORIENTATION_LANDSCAPE
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -27,6 +28,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.imageResource
+import androidx.compose.ui.res.integerResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -36,8 +38,9 @@ import com.example.lab1android.ui.theme.Lab1AndroidTheme
 @Composable
 fun BusinessCardLayout ()
 {
-    val context = LocalContext.current
-    val isLandscape = context.resources.configuration.orientation == 2
+    val context     = LocalContext.current
+    val isLandscape =
+        context.resources.configuration.orientation == ORIENTATION_LANDSCAPE
 
     if(isLandscape)
         LandscapeLayout()
@@ -91,12 +94,12 @@ fun PhotoName() {
         Text(
             text = stringResource(R.string.name),
             color = MaterialTheme.colorScheme.primary,
-            fontSize = 7.em
+            fontSize = integerResource(R.integer.primary_font_size).em
         )
         Text(
             text = stringResource(R.string.post),
             color = MaterialTheme.colorScheme.secondary,
-            fontSize = 4.em
+            fontSize = integerResource(R.integer.secondary_font_size).em
         )
     }
 }
@@ -120,7 +123,7 @@ fun Contacts ()
             Text(
                 text = stringResource(R.string.phone) + ": " + stringResource(R.string.phone_number),
                 color = MaterialTheme.colorScheme.onBackground,
-                fontSize = 4.em
+                fontSize = integerResource(R.integer.on_background_font_size).em
             )
         }
         Row(modifier = Modifier.align(Alignment.Start), Arrangement.SpaceBetween) {
@@ -134,7 +137,7 @@ fun Contacts ()
             Text(
                 text = stringResource(R.string.email) + ": " + stringResource(R.string.email_adress),
                 color = MaterialTheme.colorScheme.onBackground,
-                fontSize = 4.em
+                fontSize = integerResource(R.integer.on_background_font_size).em
             )
         }
     }
