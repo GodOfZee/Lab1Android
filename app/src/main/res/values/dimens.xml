@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="primary_font_size">7</integer>
+    <integer name="secondary_font_size">4</integer>
+    <integer name="on_background_font_size">4</integer>
+
+    <dimen name="small_padding">8.dp</dimen>
+    <dimen name="standard_padding">16.dp</dimen>
+    <dimen name="large_padding">24.dp</dimen>
+
+    <dimen name="avatar_size">200.dp</dimen>
+
+    <dimen name="spacer_size">10.dp</dimen>
+</resources>

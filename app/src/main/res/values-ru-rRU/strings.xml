@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Визитка</string>
+    <string name="name">Микрюков Александр</string>
+    <string name="picture_description">Мужчина в очках</string>
+    <string name="phone">Телефон</string>
+    <string name="email">Почта</string>
+    <string name="post">Студент группы Б23–191–1</string>
+    <string name="phone_icon_description">Изображение телефона</string>
+    <string name="email_icon_description">Изображение письма</string>
+</resources>
